@@ -1,0 +1,7 @@
+/.metadata/
+
+# Allow JAR files in Libs_HBM5_for_Java12
+!Libs_HBM5_for_Java12/*.jar
+
+# Allow Libs_HBM5_for_Java.zip
+!Libs_HBM5_for_Java.zip
