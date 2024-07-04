@@ -117,7 +117,7 @@ public class CustomerDAO {
 		
 		try {
 			beginOperation();
-			customer = session.createQuery("from Customer c order by c.lastName asc, c.firstName asc where c.nationalId = :nationalId",Customer.class)
+			customer = session.createQuery("from Customer c where c.nationalId = :nationalId order by c.lastName asc, c.firstName asc ",Customer.class)
 					.setParameter("nationalId", nationalId).uniqueResult();
 		}finally {
 			session.close();
