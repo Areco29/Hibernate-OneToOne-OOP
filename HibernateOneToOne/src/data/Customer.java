@@ -95,7 +95,15 @@ public class Customer {
     }
 
     public String toStringWithContacts() {
-        return toString() + contact;
+    	String str;
+    	if(contact!=null) {
+    		str = toString() + contact;
+    	}else {
+    		str = toString() + "\n\tcontact: "+contact;
+    	}
+    	 
+    	
+        return str;
     }
 	
 	
