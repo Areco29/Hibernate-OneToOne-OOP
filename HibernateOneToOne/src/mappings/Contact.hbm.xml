@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="data.Contact" table="contact">
+		<id name="contactId" column="contactId">
+			<generator class="foreign">
+				<param name="property">customer</param>
+			</generator>
+		</id>
+		<property name="email" column="email" type="string"/>
+		<property name="mobile" column="mobile" type="string"/>
+		<property name="phone" column="phone" type="string"/>
+		<one-to-one name="customer" class="data.Customer"></one-to-one>
+	</class>	
+</hibernate-mapping>
